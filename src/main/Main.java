@@ -119,14 +119,14 @@ public class Main {
 
 				} while (verificacao(perguntas.get(0), resposta));
 
-				System.out.println("O bom senhor grita aos quatro cantos \"VIVA! Finalmente alguém sábio\"\n"
+				System.out.println("\n\nO bom senhor grita aos quatro cantos: \"VIVA! Finalmente alguém sábio\".\n"
 						+ "Ele lhe dá o copo d'água. Você bebe e já não sente mais aquela sede de antes.\n\n"
 						+ "Memórias começam a voltar para a sua mente... Você se lembra do seu objetivo e de uma busca que você fazia.\n"
 						+ "Você estava atrás do famoso Escaravelho Rubi. Alguns tentaram lhe desanimar, falavam que não existia, mas você não abaixava a cabeça.\n"
 						+ "Você decide investigar sobre. O que fazer agora?\n\n"
 						+ "1 - Perguntar sobre o Escaravelho para as pessoas no bar.\n"
 						+ "2 - Pedir a informação que o bom senhor iria lhe passar.\n"
-						+ "3 - Sair sem rumo da taverna e correr em linha reta.\n\n");
+						+ "3 - Sair sem rumo da taverna e correr em linha reta.\n");
 				System.out.print("Resposta: ");
 				escolha = leitor.nextInt();
 
@@ -141,9 +141,9 @@ public class Main {
 								"O bom senhor lhe diz que falará tudo que sabe se conseguir responder a mais um de seus enigmas.\n"
 										+ "Se vendo novamente sem mais opções, você aceita.\n\n"
 										+ "Logo, o bom senhor lhe diz:\n" 
-										+ "\"" + perguntas.get(0).getPergunta() + "\"\n" 
-										+ "E novamente te dá 5 alternativas de resposta:\n"
-										+ perguntas.get(0).getAlternativasEmString() + "\n\n");
+										+ "\n\"" + perguntas.get(0).getPergunta() + "\"\n\n" 
+										+ "E novamente te dá 5 alternativas de resposta:\n\n"
+										+ perguntas.get(0).getAlternativasEmString() + "\n");
 						System.out.print("Resposta: ");
 						resposta = leitor.nextInt();
 
@@ -198,6 +198,7 @@ public class Main {
 
 		if (pergunta.getResposta().equalsIgnoreCase(pergunta.getAlternativas().get(alternativaSelecionada - 1))) {
 			perguntas.remove(pergunta);
+			Collections.shuffle(perguntas);
 			return false;
 		} else {
 			if (qtdVida > 0) {
