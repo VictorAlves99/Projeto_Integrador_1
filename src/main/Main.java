@@ -47,7 +47,6 @@ public class Main {
 				Collections.shuffle(perguntas);
 
 				jogo(perguntas); // Aqui vai chamar o metodo do inicio do jogo
-
 				break;
 
 			case 2:
