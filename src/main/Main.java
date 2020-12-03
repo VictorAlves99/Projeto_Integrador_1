@@ -12,22 +12,23 @@ public class Main {
 
 	private static Scanner leitor = new Scanner(System.in);
 
+	private static List<Perguntas> perguntas;
+
 	public static void main(String[] args) {
 		menu();
 	}
 
 	// para o menu do jogo
 	public static void menu() {
+		perguntas = new ArrayList<>();
 		int opcao;
-
-		List<Perguntas> perguntas = new ArrayList<Perguntas>();
 
 		do {
 			System.out.println("-----ESCARAVELHO RUBI-----");
 			System.out.println();
 			System.out.println("1 - Jogar");
 			System.out.println("2 - Instruções");
-			System.out.println("3 - Creditos");
+			System.out.println("3 - Créditos");
 			System.out.println("4 - Sair");
 			System.out.print("\nEscolha opção: ");
 
@@ -43,6 +44,7 @@ public class Main {
 
 				int dificuldade = leitor.nextInt();
 				ajustarPerguntas(perguntas, dificuldade);
+				Collections.shuffle(perguntas);
 
 				jogo(perguntas); // Aqui vai chamar o metodo do inicio do jogo
 
@@ -139,13 +141,13 @@ public class Main {
 								"O bom senhor lhe diz que falará tudo que sabe se conseguir responder a mais um de seus enigmas.\n"
 										+ "Se vendo novamente sem mais opções, você aceita.\n\n"
 										+ "Logo, o bom senhor lhe diz:\n" 
-										+ "\"" + perguntas.get(1).getPergunta() + "\"\n" 
+										+ "\"" + perguntas.get(0).getPergunta() + "\"\n" 
 										+ "E novamente te dá 5 alternativas de resposta:\n"
-										+ perguntas.get(1).getAlternativasEmString() + "\n\n");
+										+ perguntas.get(0).getAlternativasEmString() + "\n\n");
 						System.out.print("Resposta: ");
 						resposta = leitor.nextInt();
 
-					} while (verificacao(perguntas.get(1), resposta));
+					} while (verificacao(perguntas.get(0), resposta));
 					
 				} else if (escolha == 3) {
 					System.out.println(
@@ -195,6 +197,7 @@ public class Main {
 		// tiver 0 não pode mais errar.
 
 		if (pergunta.getResposta().equalsIgnoreCase(pergunta.getAlternativas().get(alternativaSelecionada - 1))) {
+			perguntas.remove(pergunta);
 			return false;
 		} else {
 			if (qtdVida > 0) {
