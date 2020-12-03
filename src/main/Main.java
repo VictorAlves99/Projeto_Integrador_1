@@ -245,7 +245,7 @@ public class Main {
 			pergunta = new Perguntas();
 
 			pergunta.setPergunta(
-					"Somos 3 irmãos: José, Adriano e Caio.\nSabe-se que ou José mais velho ou Adriano é o mais novo.\n"
+					"Somos 3 irmãos: José, Adriano e Caio.\nSabe-se que ou José é o mais velho ou Adriano é o mais novo.\n"
 							+ "Sabe-se também que ou Adriano é o mais velho ou Caio é o mais velho."
 							+ "\nQuem é o mais velho e o mais novo, respectivamente?");
 			pergunta.setResposta("Caio e Adriano");
