@@ -73,9 +73,9 @@ public class Main {
 		System.out.print("\n\nInsira o nome do jogador(a): ");
 		nomeJogador = leitor.next();
 		System.out.println("\n\nOlá " + nomeJogador + "!\n"
-				+ "No jogo o escaravelho rubi, você terá que descobrir como e porque você foi parar naquela jornada,\n"
+				+ "O jogo o escaravelho rubi, você terá que descobrir como e porque você foi parar naquela jornada,\n"
 				+ "além de procurar o significado de sua busca. Nesse jogo vamos mostrar a sua evolução quantos os níveis de dificuldade dos Desafios.\n"
-				+ "Eai, vamos começar os desafios, " + nomeJogador + "?");
+				+ "Eai, vamos começar os desafios " + nomeJogador + "?");
 
 		System.out.println("\n\nEra dia, por volta de Setembro de 1978, você se encontra perdido em meio a um deserto."
 				+ "Você olha para os lados e vê apenas areia,\nmas forçando um pouco mais sua vista, enxerga longinquamente "
@@ -112,7 +112,7 @@ public class Main {
 							"Para lhe facilitar a resposta o bom senhor lhe dá alternativas para responder a pergunta:\n");
 					System.out.println(perguntas.get(0).getAlternativasEmString());
 					System.out.print("\nResposta: ");
-					resposta = leitor.nextInt(); // lê a resposta do usuário
+					resposta = leitor.nextInt();
 
 				} while (verificacao(perguntas.get(0), resposta));
 
@@ -142,50 +142,50 @@ public class Main {
 										+ "\"\n\n" + "E novamente te dá 5 alternativas de resposta:\n\n"
 										+ perguntas.get(0).getAlternativasEmString() + "\n");
 						System.out.print("Resposta: ");
-						resposta = leitor.nextInt(); // lê a resposta do usuário
+						resposta = leitor.nextInt();
 
 					} while (verificacao(perguntas.get(0), resposta));
 
 					System.out.println(
-							"\n\nO bom senhor brada mais uma vez ao alto, dizendo: \"IHAAA! Rapaz, sabia que você era bom, viu! Mas não sabia que você era o melhor.\""
-									+ "\n\nVocê se felicita com o brado do senhor e exige mais informações sobre o Escaravelho Rubi.\n\n"
+							"\n\nO bom senhor brada mais uma vez ao alto, dizendo:\n\"IHAAA! Rapaz, sabia que ocê era bão viu! Mas num sabia que ocê era o mió.\""
+									+ "\nVocê se felicita com o brado do senhor e exige mais informações sobre o Escaravelho Rubi.\n"
 									+ "Quando o senhor tomou iniciativa para falar, de repente um servo do Faraó entra desesperado na taverna e anuncia:\n"
-									+ "\"EI! Você! O grande Faraó solicita a sua presença no palácio IMEDIATAMENTE!\"\n\n"
-									+ "Você fica assustado porque foi encontrado, mas insiste em continuar com a sua busca.\n O servo mais uma vez tenta lhe convencer e você o ignora, esperando"
-									+ "que ele vá embora.\n\nO Servo então lhe dá condição, caso você acerte uma questão, ele irá embora, lhe dando mais 2 noites para continuar com sua busca.\n\n"
+									+ "\"EI! Você! O grande Faraó solicita a sua presença no palácio IMEDIATAMENTE!\"\n"
+									+ "Você fica assustado porque foi encontrado, mas insiste em continuar com a sua busca. O servo mais uma vez tenta lhe convencer e você o ignora, esperando"
+									+ "que ele vá embora.\nO Servo então lhe dá condição, caso você acerte a questão, ele irá embora, lhe dando mais 2 noites para continuar com a busca.\n"
 									+ "Você aceita o desafio bravamente. Portanto o servo lhe pergunta:\n" + "\""
 									+ perguntas.get(0).getPergunta() + "\"\n\n"
 									+ perguntas.get(0).getAlternativasEmString() + "\n");
 					System.out.print("Resposta: ");
-					resposta = leitor.nextInt(); // lê a resposta do usuário
+					resposta = leitor.nextInt();
 					if (!verificacao(perguntas.get(0), resposta)) {
 						System.out.println(
-								"\nO servo fica surpreso por você conseguir acertar e ganhar a condição proposta. \n"
+								"O servo fica surpreso por você conseguir acertar e ganhar a condição proposta. \n"
 										+ "Ele te lembra que tem mais 2 noites para sua busca e se não retornar, ele vai te achar onde estiver e te buscar a força.\n\n"
 										+ "Depois do servo zarpar da taverna, o bom senhor, impressionado com sua sabedoria, ele te dá as informações que precisa, juntamente com uma bolsa com alimentos, água, para sobreviver durante a jornada. Luneta"
 										+ "e um mapa com a esfinge mais próxima. Agradecido pela generosidade do bom senhor, você sai da taverna empolgado.\n\n"
 										+ "No momento em que você começa a andar para a sua próxima jornada, o bom senhor, aos berros, lhe diz:"
-										+ "\n\"ESPEEERA! Tenho algo para lhe ajudar a ir mais rápido! Mas, assim como nas outras vezes, terei que testá-lo.\" - diz ele trazendo um camelo.\n"
-										+ "Você aceita a ajuda dele?\n\n" + "1 - Sim\n" + "2 - Não\n");
+										+ "\n\"ESPEEERA! Tenho algo para lhe ajudar a ir mais rápido! Mas, assim como nas outras vezes, terei que testá-lo.\" Diz ele trazendo um camelo.\n"
+										+ "Você aceita a ajuda dele?\n\n" + "1 - Sim\n" + "2 - Não\n\n");
 						System.out.print("Resposta: ");
 						escolha = leitor.nextInt();
 
 						if (escolha == 1) {
 
 							do {
-								System.out.println("\nO bom senhor então começa a perguntar:\n" + "\""
+								System.out.println("O bom senhor então começa a perguntar:\n" + "\""
 										+ perguntas.get(0).getPergunta() + "\"\n\n"
 										+ perguntas.get(0).getAlternativasEmString() + "\n");
 								System.out.print("Resposta: ");
-								resposta = leitor.nextInt(); // lê a resposta do usuário
+								resposta = leitor.nextInt();
 							} while (verificacao(perguntas.get(0), resposta));
 							qtdVida = 1;
 							estaNaEsfinge = true;
 							System.out.println(
-									"\nCom um grande sorriso e levando Camilo, o camelo, até você, o bom senhor diz:"
-											+ "\n\"Parabéns meu jovem, leve este camelo com você! Ele será fiel a você durante toda a sua jornada. E tome cuidado!\""
-											+ "\n\nVocê agradece o bom senhor, monta no camelo e finalmente começa a sua jornada."
-											+ "\n\nApós 15 longas horas montado no Camilo, você finalmente chega à esfinge."
+									"Com um grande sorriso e levando Camilo, o camelo, até você, o bom senhor diz:"
+											+ "\"Parabéns meu jovem, leve este camelo com você! Ele será fiel a você durante toda a sua jornada. E tome cuidado! Há inimigos e animais perigosos no caminho!\""
+											+ "\nVocê agradece o bom senhor, monta no camelo e finalmente começa a sua jornada."
+											+ "\n\nApós 15 longas horas montado no Camilo, você finalmente chega a esfinge."
 											+ "\n\n*!*Aqui começa a sua última parte da jornada. A partir daqui você terá apenas uma chance, esteja preparado. E que a sorte esteja sempre ao seu favor.*!*\n\n"
 											+ "Você lê a escritura na porta da esfinge, que diz: \n\n\"litajawuz hdha albab, yjb ealayk halun hdha allaghaz.\"\n\n"
 											+ "Você fica desesperado, pois não reconhecia aquela língua. Mas, ao revistar as bolsas do Camilo, o camelo, você acha um pergaminho que traduzia a frase:\n\n"
@@ -194,86 +194,44 @@ public class Main {
 											+ perguntas.get(0).getPergunta() + "\"\n\n"
 											+ perguntas.get(0).getAlternativasEmString() + "\n");
 							System.out.print("Resposta: ");
-							resposta = leitor.nextInt(); // lê a resposta do usuário
+							resposta = leitor.nextInt();
 							if (!verificacao(perguntas.get(0), resposta)) {
 								System.out.println(
-										"\nA porta se abre, você entra e sente uma cobra passar pelo seu pé.\nAo se deparar com a cobra, você vê que há um caminho cheio delas e no outro caminho um corredor cheio de armadilhas.\n\n"
-												+ "Como você tem pavor de agulhas, você segue em direção as cobras. \n\nUm pouco mais adiante, você avista uma mulher sentada em um trono e a reconhece como a Medusa. \n\n"
-												+ "Imediatamente você fecha os olhos. Ela ao te ver em desespero, dá uma risada sarcástica e lhe diz:\n\n"
-												+ "\"Homenzinho, lhe darei uma chance de passar por mim. Você terá que acertar doiss doss meuss enigmasss.\""
-												+ "\n\nVocê sabe que essa é a única oportunidade e aceita seguir adiante.\n\n"
-												+ "Logo, a mulher do cabelo de cobras lhe faz a primeira das perguntas: \n\n"
+										"A porta se abre, você entra e sente uma cobra passar pelo seu pé. Ao se deparar com a cobra, você vê que há um caminho cheio delas e no outro caminho, um corredor cheio de armadilhas.\n"
+												+ "Como você tem medo de agulhas, você segue em direção as cobras. Um pouco mais adiante, você avista uma mulher sentada em um trono e a reconhece como a Medusa. \n"
+												+ "Imediatamente você fecha os olhos. Ela ao te ver em desespero, dá uma risada sarcástica e lhe diz:\n"
+												+ "\"Homenzinho, lhe darei uma chance de passar por mim. Você terá que acertar doiss doss meuss enigmas.\""
+												+ "\n\nVocê sabe que essa é a única oportunidade e aceita seguir adiante.\n"
+												+ "Logo, a mulher do cabelo de cobras lhe faz a primeira das perguntas: \n"
 												+ "\"" + perguntas.get(0).getPergunta() + "\"\n\n"
 												+ perguntas.get(0).getAlternativasEmString() + "\n");
 								System.out.print("Resposta: ");
-								resposta = leitor.nextInt(); // lê a resposta do usuário
+								resposta = leitor.nextInt();
 								if (!verificacao(perguntas.get(0), resposta)) {
 									System.out.println(
-											"\nMedusa diz: \"Muito bem, muito bem! Agora... Vamoss para a ssegunda quesstão...\"\n\n"
+											"Medusa diz: \"Muito bem, muito bem! Agora... Vamoss para a ssegunda quesstão...\""
 													+ "\"" + perguntas.get(0).getPergunta() + "\"\n\n"
 													+ perguntas.get(0).getAlternativasEmString() + "\n");
 									System.out.print("Resposta: ");
-									resposta = leitor.nextInt(); // lê a resposta do usuário
+									resposta = leitor.nextInt();
 									if (!verificacao(perguntas.get(0), resposta)) {
 										System.out.println(
-												"\nMeuss parabénss homenzinho! Você conseguiu acertar ass perguntass... Siga em frente!"
-														+ "\n\nVocê ouve as portas se abrirem e, ainda sem abrir os olhos, corre em direção ao barulho das portas.\n\n"
-														+ "Ao entrar na próxima sala e finalmente ouvir as portas fecharem, você abre os olhos e percebe que está em uma sala escura, "
-														+ "com apenas um ponto de luz.\n\nUsando a luneta, você consegue enxergar o belíssimo Escaravelho Rubi."
-														+ "\n\nSeu coração começa a pulsar mais forte. Finalmente você o encontrou!! Apressadamente ao se aproximar, você vê que não será tão simples finalizar a sua jornada."
-														+ "\n\nUm pedaço do chão se abre em sua frente e um muro sobe em torno do escaravelho simultaneamente, e você ouve uma voz semelhante a de um Deus dizendo:\n"
-														+ "\"Para ser merecedor do Escaravelho Rubi, você deverá responder a mais 2 enigmas. Aqui vem o primeiro:\"\n\n"
-														+ "Ao mesmo tempo do final da frase, você vê uma das perguntas surgir no solo. Em letras de lava, você lê: \n\n"
+												"Meuss parabénss homenzinho! Você conseguiu acertar ass perguntass... Siga em frente!"
+														+ "\nVocê ouve as portas se abrirem e, ainda sem abrir os olhos, corre em direção ao barulho das portas.\n\n"
+														+ "Ao entrar na próxima sala e finalmente ouvir as portas fecharem, você abre os olhos e percebe que está em uma sala escura,"
+														+ "com apenas um ponto de luz.\nUsando a luneta, você consegue enxergar o belíssimo Escaravelho Rubi."
+														+ "\nSeu coração começa a pulsar mais forte. Finalmente você o encontrou!! Apressadamente ao se aproximar, você vê que não será tão simples finalizar a sua jornada."
+														+ "\nUm chão se abre em sua frente e um muro sobe em torno do escaravelho simultaneamente, e você ouve uma voz semelhante a de um Deus dizendo:\n"
+														+ "\"Para ser merecedor do Escaravelho Rubi, você deverá responder a mais 2 enigmas. Aqui vem o primeiro:\"\n"
+														+ "Ao mesmo tempo do final da frase, você vê uma das perguntas surgir do solo. Em letras de lava, você lê: \n\n"
 														+ "\"" + perguntas.get(0).getPergunta() + "\"\n\n"
 														+ perguntas.get(0).getAlternativasEmString() + "\n");
 										System.out.print("Resposta: ");
-										resposta = leitor.nextInt(); // lê a resposta do usuário
+										resposta = leitor.nextInt();
 										if (!verificacao(perguntas.get(0), resposta)) {
-											System.out.println("\nVocê ouve aquele brado glorioso novamente:"
-													+ "\n\"Muito bem, " + nomeJogador
-													+ "! Você acertou o primeiro de meus desafios... Poderá chegar mais perto do muro para ler o próximo enigma.\"\n\n"
-													+ "Dito isto, o chão coomeça a se reerguer e a lava começa a secar, deixando o caminho até o muro completamente livre.\n\n"
-													+ "Você enxerga também letras de luz se formando no muro que está a sua frente. Nessas letras se lê:\n\n"
-													+ "\"" + perguntas.get(0).getPergunta() + "\"\n\n"
-													+ perguntas.get(0).getAlternativasEmString() + "\n");
-											System.out.print("Resposta: ");
-											resposta = leitor.nextInt(); // lê a resposta do usuário
-											if (!verificacao(perguntas.get(0), resposta)) {
-												System.out.println(
-														"O muro começa a se recolher e o Escaravelho Rubi fica novamente dentro do seu campo de visão.\n\n"
-																+ "O muro desce por completo.\n"
-																+ "Você ainda não acredita que finalmente conseguiu.\n"
-																+ "Chegando mais perto do altar, você percebe que a mesma luz que vinha do muro está em volta do escaravelho."
-																+ "E, mais uma vez, ouve aquela voz divina: \n\n"
-																+ "\"Achou que seria tão fácil me derrotar? HAHAHAHA! Você precisará responder corretamente a mais um enigma.\"\n\n"
-																+ "E assim você vê uma figura de luz caminhando em volta do altar. Essa figura, ainda com a voz divina, lhe diz:\n\n"
-																+ "\"" + perguntas.get(0).getPergunta() + "\"\n\n"
-																+ perguntas.get(0).getAlternativasEmString() + "\n");
-												System.out.print("Resposta: ");
-												resposta = leitor.nextInt(); // lê a resposta do usuário
-												if (!verificacao(perguntas.get(0), resposta)) {
-													System.out.println("\"NÃAAOOOOO! IMPOSSÍVEL UM MORTAL GANHAR DE MIIIMMM...\" - exclama a figura de luz enquanto ela desaparece.\n"
-															+ "Com a maior cautela, você se aproxima do Escarvelho Rubi. Não existe mais aquele campo de luz em volta dele.\n"
-															+ "Você o pega e comemora que sua jornada não foi em vão... Logo, você escuta uma voz conhecida que diz:\n"
-															+ "\"Bom trabalho garoto! Sabia que poderia confiar em você...\"\n"
-															+ "Você se vira e encontra o bom senhor da taverna.\n"
-															+ "Ele abre um sorriso enorme enquanto se transforma em uma forma de luz puríssima.\n\n"
-															+ "Você o pergunta: \"Deus?? És tu?\"\n"
-															+ "Ele o responde: \"Sim filho, eu sou Deus! A muito tempo espero alguém como você naquela taverna. Você tem futuro, aguarde para mais aventuras...\"");
-												}else {
-													System.out.println("Aquela figura de luz te direciona uma grande rajada de luz. Você queima até a morte.");
-													fimDeJogo();
-													System.exit(0);
-												}
-											} else {
-												System.out.println(
-														"As luzes que estavam no muro começam a ficar mais fortes, mais intensas e mais quentes. Você frita ao elas se concentrarem no seu peito!");
-												fimDeJogo();
-												System.exit(0);
-											}
+											System.out.println();
 										} else {
-											System.out.println(
-													"O mar de lava começa a subir, subir e subir e você se vê totalmente afogado em lava.");
+											System.out.println("O mar de lava começa a subir, subir e subir e você se vê totalmente afogado em lava.");
 											fimDeJogo();
 											System.exit(0);
 										}
@@ -384,7 +342,9 @@ public class Main {
 	}
 
 	public static void creditos() {
-
+		System.out.println("\nProjeto feito pelos integrantes:\n"
+				+ "- Priscyla Oliveira\n"
+				+ "- Victor Oliveira\n");
 	}
 
 	private static void ajustarPerguntas(List<Perguntas> perguntas, int dificuldade) {
